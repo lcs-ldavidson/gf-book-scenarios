@@ -14,6 +14,7 @@ public class Key extends Actor
      */
     public void act()
     {
+        turn(1);
     }
 }
 

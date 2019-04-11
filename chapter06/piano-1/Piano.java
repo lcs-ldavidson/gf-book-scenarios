@@ -10,19 +10,24 @@ public class Piano extends World
 {
     int timeElapsed;
     String[] peopleInClass = {"Julio", "Liam", "Simon", "Eric"}; 
-    
+
     /**
      * Make the piano.
      */
     public Piano() 
     {
         super(800, 340, 1);
-        timeElapsed = 1926092604;
+        
+        timeElapsed = 0;
     }
-    
+
     public void act() {
-        timeElapsed += 1;
+        
         showText("" + timeElapsed, 100, 100);
-        addObject(new Key(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(340));
+        if (timeElapsed % 60 == 0 && timeElapsed < 60 * 4) {
+            showText("hello " + peopleInClass[timeElapsed / 60], 400, 170);
+        }
+
+        timeElapsed += 1;
     }
 }
