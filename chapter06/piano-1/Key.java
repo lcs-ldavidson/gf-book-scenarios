@@ -2,11 +2,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 
 public class Key extends Actor
 {
-    /**
-     * Create a new key.
-     */
+    
+    GreenfootImage keyDown;
+    GreenfootImage keyUp;
+    
     public Key()
     {
+        keyDown = new GreenfootImage("white-key-down.png");
+        keyUp = new GreenfootImage("white-key.png");
+        setImage(keyUp);
     }
 
     /**
@@ -14,7 +18,11 @@ public class Key extends Actor
      */
     public void act()
     {
-        turn(5);
+        if (Greenfoot.isKeyDown("g")) {
+            setImage(keyDown);
+        } else {
+            setImage(keyUp);
+        }
     }
 }
 
