@@ -23,9 +23,10 @@ public class Piano extends World
 
     public void act() {
         
-        showText("" + timeElapsed, 100, 100);
-        if (timeElapsed % 60 == 0 && timeElapsed < 60 * 4) {
+        showText("Time Elapsed: " + timeElapsed, 150, 100);
+        if (timeElapsed % 60 == 0 && timeElapsed / 60 < 4) {
             showText("hello " + peopleInClass[timeElapsed / 60], 400, 170);
+            showText("Array index is " + timeElapsed / 60, 400, 250);
         }
 
         timeElapsed += 1;
