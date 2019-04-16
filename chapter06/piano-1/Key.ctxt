@@ -1,8 +1,11 @@
 #BlueJ class context
 comment0.target=Key
-comment1.params=
-comment1.target=Key()
+comment1.params=key\ note\ isWhite
+comment1.target=Key(java.lang.String,\ java.lang.String,\ boolean)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Do\ the\ action\ for\ this\ key.\n
-numComments=3
+comment3.params=
+comment3.target=void\ animate()
+comment4.params=
+comment4.target=void\ playNote()
+numComments=5
